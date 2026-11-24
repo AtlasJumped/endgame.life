@@ -182,7 +182,7 @@ var DESIGNS=[
  {n:3,name:"Night terminal"},
  {n:4,name:"Calm sea"}
 ];
-var LEVELS=[["strong-dislike","Strong dislike"],["dislike","Dislike"],["like","Like"],["strong-like","Strong like"]];
+var LEVELS=[["strong-like","Strong like"],["like","Like"],["dislike","Dislike"],["strong-dislike","Strong dislike"]];
 var KEY="endgame.designRatings.v1";
 function load(){try{var r=localStorage.getItem(KEY);return r?JSON.parse(r)||{}:{}}catch(e){return {}}}
 function save(o){try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
