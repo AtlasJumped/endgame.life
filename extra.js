@@ -195,7 +195,7 @@ function applyDesign(n,push){
 }
 applyDesign(design);
 
-var fab=el("button","dfab","Designs");fab.type="button";fab.setAttribute("aria-haspopup","dialog");fab.setAttribute("aria-expanded","false");
+var fab=el("button","dfab","Design");fab.type="button";fab.setAttribute("aria-haspopup","dialog");fab.setAttribute("aria-expanded","false");
 var panel=el("div","dpanel");panel.setAttribute("role","dialog");panel.setAttribute("aria-label","Design picker");panel.hidden=true;
 var ph=el("div","dph");ph.appendChild(el("b",null,"Pick a design"));
 var x=el("button","dx","×");x.type="button";x.setAttribute("aria-label","Close design picker");ph.appendChild(x);
