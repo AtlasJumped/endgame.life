@@ -78,7 +78,7 @@ for i,(t,sub,who,line,today,y36,steps) in enumerate(M,1):
 <p class="who"><b>{html.escape(who.split(',')[0])}</b>,{html.escape(who.split(',',1)[1])}. {html.escape(line)}</p>
 <div class="screen" aria-live="polite"><div class="bar"><span>Dashboard</span><span>{html.escape(t)}</span></div><div class="fw">{st}</div></div>
 <div class="ctl"><button class="pill solid play" type="button">Press play</button><span class="status">Ready</span></div>
-<div class="labels"><p class="today"><b>Works today</b>{html.escape(today.split(': ',1)[1])}</p><p class="y36"><b>In 2036</b>{html.escape(y36.split(': ',1)[1])}</p></div></article>""")
+<div class="labels"><p class="today"><b>Works today</b>{html.escape(today.split(': ',1)[1][0].upper()+today.split(': ',1)[1][1:])}</p><p class="y36"><b>In 2036</b>{html.escape(y36.split(': ',1)[1][0].upper()+y36.split(': ',1)[1][1:])}</p></div></article>""")
     rail.append(f'<a href="#m{i}" aria-label="Moment {i}: {html.escape(t)}"><span>{i}. {html.escape(t)}</span></a>')
 page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Endgame Life: a day in 2036</title>

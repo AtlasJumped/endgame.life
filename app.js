@@ -29,7 +29,7 @@ if(!('IntersectionObserver' in window))document.querySelectorAll('.moment').forE
     const N=110,pos=new Float32Array(N*N*3),col=new Float32Array(N*N*3),base=[];
     let k=0;for(let i=0;i<N;i++)for(let j=0;j<N;j++){const x=(i-N/2)*.7,z=-(j*.7)+8;pos.set([x,0,z],k*3);base.push([x,z]);col.set([1,.7+Math.random()*.3,.4],k*3);k++}
     const g=new T.BufferGeometry();g.setAttribute('position',new T.BufferAttribute(pos,3));g.setAttribute('color',new T.BufferAttribute(col,3));
-    const pts=new T.Points(g,new T.PointsMaterial({size:.09,vertexColors:true,transparent:true,opacity:.9,sizeAttenuation:true}));scene.add(pts);
+    const pts=new T.Points(g,new T.PointsMaterial({map:(()=>{const c=document.createElement('canvas');c.width=c.height=64;const x=c.getContext('2d');const gr=x.createRadialGradient(32,32,0,32,32,32);gr.addColorStop(0,'#fff');gr.addColorStop(.5,'#fff');gr.addColorStop(1,'#fff0');x.fillStyle=gr;x.fillRect(0,0,64,64);return new T.CanvasTexture(c)})(),alphaTest:.05,depthWrite:false,size:.13,vertexColors:true,transparent:true,opacity:1,sizeAttenuation:true}));scene.add(pts);
     const sun=new T.Mesh(new T.SphereGeometry(5,48,48),new T.MeshBasicMaterial({color:0xffd23f,fog:false}));sun.position.set(0,-3,-60);scene.add(sun);
     const halo=new T.Mesh(new T.SphereGeometry(9,32,32),new T.MeshBasicMaterial({color:0xff5a36,transparent:true,opacity:.25,fog:false}));halo.position.copy(sun.position);scene.add(halo);
     let mx=0,my=0,sy=0;

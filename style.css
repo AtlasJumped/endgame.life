@@ -66,3 +66,7 @@ main{max-width:70rem;margin:0 auto;padding:0 1.2rem}
 footer{border-top:2px solid #fff6e033;padding:1.5rem;text-align:center;color:var(--mut);font-size:.9rem}
 @media(max-width:820px){.grid,.three{grid-template-columns:1fr}.rail{display:none}.cols{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.moment{opacity:1;transform:none}}
+.step .cols{margin:0}.step .step{margin:0;background:#fff8e8}
+.step:has(.cols){border:0;padding:0;background:transparent}
+.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#0e102088,#0e102000 60%),linear-gradient(0deg,#0e102033,#0e102000 40%);pointer-events:none}
+.hero-in{text-shadow:0 2px 18px #0e1020aa}
