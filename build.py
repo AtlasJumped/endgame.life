@@ -85,7 +85,7 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <meta name="description" content="If claudebomb.com succeeds, this is what life looks like in 2036. A vision, with each claim labeled.">
 <link rel="stylesheet" href="style.css"></head><body>
 <a class="skip" href="#moments">Skip to the moments</a>
-<header><a class="logo" href="#top">endgame<b>.</b>life</a><a class="pill solid" href="https://claudebomb.com">Start today</a></header>
+<header><a class="logo" href="#top">endgame<b>.</b>life</a><nav class="hnav" aria-label="Sections"><a href="#path">Choose your path</a><a href="#vision">The vision</a></nav><a class="pill solid" href="https://claudebomb.com">Start now: claudebomb.com</a></header>
 <nav class="rail" aria-label="Moments">{''.join(rail)}</nav>
 <section class="hero" id="top"><canvas id="gl" aria-hidden="true"></canvas>
 <div class="hero-in"><div class="eyebrow">A vision of 2036</div><h1>One dashboard. <em>Your whole life</em> in view.</h1>
@@ -94,6 +94,21 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <main id="moments"><section class="intro"><div class="eyebrow">If claudebomb.com succeeds</div><h2>This is life in 2036.</h2>
 <p>Each person below is invented. Press play to watch a short storyboard. Under each one, <b>Works today</b> says what you can do now with the free dashboard file at claudebomb.com. <b>In 2036</b> says what we hope will be true.</p></section>
 <div class="grid">{''.join(cards)}</div>
+<section class="path" id="path" aria-labelledby="path-h"><div class="eyebrow">Choose your path</div><h2 id="path-h">Where do you want to go first?</h2>
+<p class="note">Short invented scenes of life around 2036. The people are made up. This is our vision, not fact. Press Play, or step through with Next.</p>
+<div id="story" class="story"><noscript><p>The story scenes need JavaScript. The nine moments above work without it.</p></noscript></div></section>
+<section class="vision" id="vision" aria-labelledby="vision-h"><div class="eyebrow">The vision</div><h2 id="vision-h">Our picture of about 2036</h2>
+<p class="tag"><b>Our vision, not fact.</b> Nothing on this page is a forecast or a promise. It is where we think this could go.</p>
+<div class="vgrid">
+<article class="vcard"><div class="phone" aria-hidden="true"><div class="pscr"><i></i><i></i><i></i></div><button class="mic" type="button" tabindex="-1"><span></span></button></div>
+<h3>A microphone button that never goes away</h3><p>In the bottom left corner of every phone, always, is a microphone button. Press it and talk. It goes straight to your own AI agent.</p></article>
+<article class="vcard"><div class="db" aria-hidden="true"><b></b><b></b><b></b></div><h3>Your agent learns you, in your own database</h3><p>It records what you say and learns about you. The record is stored in a database that belongs to you, not to an app company.</p></article>
+<article class="vcard"><div class="keyd"><button class="keysw" type="button" aria-pressed="false"><span class="knob"></span><span class="kl">Locked</span></button></div><h3>Danger assets stay behind a physical key</h3><p>Money is the main danger asset. We picture a hardware key that you carry, or keep in a lockbox at home, with a manual switch. Nothing that moves money works until you flip it. Try the switch.</p><p class="state" aria-live="polite">Money is locked. No agent can move it.</p></article>
+<article class="vcard"><div class="pair" aria-hidden="true"><div><b>You</b><small>voice, habits, places match</small></div><div class="fake"><b>Fake</b><small>does not match</small></div></div><h3>Oversharing with the right ally protects you</h3><p>Our idea is that if your agent holds your voice and your activity, it can tell the real you from a fake, so a stolen ID matters much less once money is locked. Whether this holds up against fast-improving fakes is <b>unknown</b>. It needs testing.</p></article>
+<article class="vcard"><div class="wear" aria-hidden="true"><span></span></div><h3>Fewer screens, more faces</h3><p>A watch or a bracelet does what a phone does, so more of us leave the phone at home. We hope the time saved goes to looking at each other.</p></article>
+</div>
+<div class="urgent"><h3>Why this is urgent</h3><p>Phone AI may soon be controlled by a few companies. If that happens before an open picture exists, the open-source community loses its grip. We want to share this vision first, and build it together as an open-source community.</p></div>
+<div class="links"><a class="pill solid" href="https://claudebomb.com">Start now: claudebomb.com</a><a class="pill" href="https://hmrfamily.life">The HMR family: hmrfamily.life</a></div></section>
 <section class="close" id="note"><div class="eyebrow">An honest note</div><h2>This is a vision, not a promise.</h2>
 <p>The people are made up. The screens are storyboards, not screenshots. Here is where things stand.</p>
 <div class="three">
@@ -101,6 +116,6 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <div class="card b"><h3>Hoped for</h3><ul><li>One tap to connect most services.</li><li>Standard read-only access at banks and apps.</li><li>Drafts that sound like you.</li><li>Shared plans among people who opt in.</li><li>Employers and people agreeing on a privacy firewall.</li></ul></div>
 <div class="card c"><h3>Unsolved</h3><ul><li>How to share dashboards safely when they touch work data.</li><li>Security risks, including malicious files and tricked assistants.</li><li>Whether assistants stay accurate enough to trust with drafts.</li><li>Whether companies will allow it.</li></ul></div></div>
 <p><a class="pill solid" href="https://claudebomb.com">Start today at claudebomb.com</a></p></section></main>
-<footer>Endgame Life is the vision site for <a href="https://claudebomb.com">claudebomb.com</a>. Three.js is used under the MIT license (vendor/three.LICENSE.txt).</footer>
-<script type="module" src="app.js"></script></body></html>"""
+<footer><p><a href="https://claudebomb.com">Start now: claudebomb.com</a> &nbsp; <a href="https://hmrfamily.life">The HMR family: hmrfamily.life</a></p>Endgame Life is the vision site for <a href="https://claudebomb.com">claudebomb.com</a>. Three.js is used under the MIT license (vendor/three.LICENSE.txt).</footer>
+<script type="module" src="app.js"></script><script src="extra.js" defer></script></body></html>"""
 open("index.html","w").write(page)
