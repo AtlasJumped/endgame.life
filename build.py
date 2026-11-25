@@ -87,9 +87,9 @@ for i,(t,sub,who,line,today,y36,steps) in enumerate(M,1):
 page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Endgame Life: a day in 2036</title>
 <meta name="description" content="If claudebomb.com succeeds, this is what life looks like in 2036. A vision, with each claim labeled.">
-<link rel="stylesheet" href="style.css"><style>header .hacts{display:flex;gap:.5rem;align-items:center;flex:none;margin-left:auto}@media(min-width:821px){header .hacts{margin-left:0}}</style></head><body>
+<link rel="stylesheet" href="style.css"><style>header .hacts{display:flex;gap:.5rem;align-items:center;flex:none;margin-left:auto}@media(min-width:821px){header .hacts{margin-left:0}}header .hacts .pill{white-space:nowrap}@media(max-width:560px){header .hacts .pill{padding:.45rem .75rem;font-size:.85rem}header .hacts .hx{display:none}}</style></head><body>
 <a class="skip" href="#moments">Skip to the moments</a>
-<header><a class="logo" href="#top">endgame<b>.</b>life</a><nav class="hnav" aria-label="Sections"><a href="#path">Choose your path</a><a href="#vision">The vision</a></nav><span class="hacts"><button type="button" class="pill" data-hmr-login aria-label="Log in (coming soon)">Log in</button><a class="pill solid" href="https://claudebomb.com">Start now: claudebomb.com</a></span></header>
+<header><a class="logo" href="#top">endgame<b>.</b>life</a><nav class="hnav" aria-label="Sections"><a href="#path">Choose your path</a><a href="#vision">The vision</a></nav><span class="hacts"><button type="button" class="pill" data-hmr-login aria-label="Log in (coming soon)">Log in</button><a class="pill solid" href="https://claudebomb.com" aria-label="Start now: claudebomb.com">Start now<span class="hx">: claudebomb.com</span></a></span></header>
 <nav class="rail" aria-label="Moments">{''.join(rail)}</nav>
 <section class="hero" id="top"><canvas id="gl" aria-hidden="true"></canvas>
 <div class="hero-in"><div class="eyebrow">A vision of 2036</div><h1>One dashboard. <em>Your whole life</em> in view.</h1>
