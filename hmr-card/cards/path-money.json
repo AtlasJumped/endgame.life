@@ -1,0 +1,91 @@
+{
+ "schema": "hmr-card/1",
+ "id": "path-money",
+ "title": "Saving money",
+ "intro": "A short made-up story about Sam, an invented person, in our vision of about 2036. Agents work on their own, and Sam answers only when needed. Nothing here is real and nothing is sent.",
+ "frame": "16:9",
+ "screen": "path",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Sam is an invented person, and nothing is sent. Your agent can see spending and subscriptions in a read-only way. It cannot move money.",
+   "act": [
+    [
+     "show",
+     "money.s1"
+    ]
+   ]
+  },
+  {
+   "say": "It notices a subscription that has gone unused for a long time and asks.",
+   "act": [
+    [
+     "hide",
+     "money.s1"
+    ],
+    [
+     "show",
+     "money.s2"
+    ],
+    [
+     "wait",
+     900
+    ],
+    [
+     "show",
+     "money.s2.v"
+    ],
+    [
+     "wait",
+     1500
+    ],
+    [
+     "show",
+     "money.s2.r"
+    ]
+   ]
+  },
+  {
+   "say": "The cancellation goes out. A cancellation is a request, not a transfer of money.",
+   "act": [
+    [
+     "hide",
+     "money.s2"
+    ],
+    [
+     "show",
+     "money.s3"
+    ]
+   ]
+  },
+  {
+   "say": "Money itself is a danger asset. When something needs a payment, the agent stops and waits for Sam's physical key and manual switch.",
+   "act": [
+    [
+     "hide",
+     "money.s3"
+    ],
+    [
+     "show",
+     "money.s4"
+    ]
+   ]
+  },
+  {
+   "say": "Sam flips the switch, confirms, and flips it back. Money is locked again. Nothing moved while the key was off.",
+   "act": [
+    [
+     "hide",
+     "money.s4"
+    ],
+    [
+     "show",
+     "money.s5"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/path-money.licence.json"
+}

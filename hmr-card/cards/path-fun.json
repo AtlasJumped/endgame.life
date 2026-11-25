@@ -1,0 +1,78 @@
+{
+ "schema": "hmr-card/1",
+ "id": "path-fun",
+ "title": "Having fun",
+ "intro": "A short made-up story about Sam, an invented person, in our vision of about 2036. Agents work on their own, and Sam answers only when needed. Nothing here is real and nothing is sent.",
+ "frame": "16:9",
+ "screen": "path",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Sam is an invented person, and nothing is sent. Your agent knows what you enjoy, what you do not want, and what is in the house: games, a guitar, ingredients.",
+   "act": [
+    [
+     "show",
+     "fun.s1"
+    ]
+   ]
+  },
+  {
+   "say": "Something good turns up and it is worth a ping.",
+   "act": [
+    [
+     "hide",
+     "fun.s1"
+    ],
+    [
+     "show",
+     "fun.s2"
+    ],
+    [
+     "wait",
+     900
+    ],
+    [
+     "show",
+     "fun.s2.v"
+    ],
+    [
+     "wait",
+     1500
+    ],
+    [
+     "show",
+     "fun.s2.r"
+    ]
+   ]
+  },
+  {
+   "say": "The invitation goes to Jun, who opted in to share plans. Jun's agent checks Jun's evening.",
+   "act": [
+    [
+     "hide",
+     "fun.s2"
+    ],
+    [
+     "show",
+     "fun.s3"
+    ]
+   ]
+  },
+  {
+   "say": "Sam never opened an app to search. The evening just got better.",
+   "act": [
+    [
+     "hide",
+     "fun.s3"
+    ],
+    [
+     "show",
+     "fun.s4"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/path-fun.licence.json"
+}

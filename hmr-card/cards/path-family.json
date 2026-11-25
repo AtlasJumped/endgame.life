@@ -1,0 +1,91 @@
+{
+ "schema": "hmr-card/1",
+ "id": "path-family",
+ "title": "Family and relationships",
+ "intro": "A short made-up story about Sam, an invented person, in our vision of about 2036. Agents work on their own, and Sam answers only when needed. Nothing here is real and nothing is sent.",
+ "frame": "16:9",
+ "screen": "path",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Sam is an invented person, and nothing is sent. Your agent keeps track of the people who matter: birthdays, and how long since you last talked.",
+   "act": [
+    [
+     "show",
+     "family.s1"
+    ]
+   ]
+  },
+  {
+   "say": "A draft is ready, in Sam's voice. Sam hears about it on the watch and answers out loud.",
+   "act": [
+    [
+     "hide",
+     "family.s1"
+    ],
+    [
+     "show",
+     "family.s2"
+    ],
+    [
+     "wait",
+     900
+    ],
+    [
+     "show",
+     "family.s2.v"
+    ],
+    [
+     "wait",
+     1500
+    ],
+    [
+     "show",
+     "family.s2.r"
+    ]
+   ]
+  },
+  {
+   "say": "The message goes out. The agent adds Sunday to the calendar.",
+   "act": [
+    [
+     "hide",
+     "family.s2"
+    ],
+    [
+     "show",
+     "family.s3"
+    ]
+   ]
+  },
+  {
+   "say": "If the people in Sam's life opt in to share plans, agents can find an evening that works for everyone, without a group chat.",
+   "act": [
+    [
+     "hide",
+     "family.s3"
+    ],
+    [
+     "show",
+     "family.s4"
+    ]
+   ]
+  },
+  {
+   "say": "Saturday comes. Phones stay home. The point of all the automation is more time looking at each other.",
+   "act": [
+    [
+     "hide",
+     "family.s4"
+    ],
+    [
+     "show",
+     "family.s5"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/path-family.licence.json"
+}

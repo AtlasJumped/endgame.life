@@ -70,6 +70,8 @@ M=[
 ]
 SL=["day-one","morning","inbox","family","trip","fun","work","money","profile"]
 GUARD='<script>/* hmr-card fallback: if the card player never loads, demo buttons open a still picture */(function(){var d=document,w=window,up=0;if(!d.addEventListener)return;w.addEventListener("load",function(){up=1},false);d.addEventListener("click",function(e){if(!up||w.HMRCard)return;var t=e.target;while(t&&t.getAttribute&&!t.getAttribute("data-hmr-card"))t=t.parentNode;if(t&&t.getAttribute){e.preventDefault();w.location.href="hmr-card/still.html"}},false)})();</script>\n'
+PM={"ORDER": ["overview", "family", "money", "time", "fun", "work"], "meta": {"overview": {"name": "Overview: how the world will probably change", "rec": True}, "family": {"name": "Family and relationships", "rec": False}, "money": {"name": "Saving money", "rec": False}, "time": {"name": "Saving time", "rec": False}, "fun": {"name": "Having fun", "rec": False}, "work": {"name": "Work", "rec": False}}}
+PATHS="".join('<button type="button" class="pill%s" data-hmr-card="path-%s">%s%s</button>'%(" solid" if PM["meta"][k]["rec"] else "",k,html.escape(PM["meta"][k]["name"]),'<span class="badge">Recommended</span>' if PM["meta"][k]["rec"] else "") for k in PM["ORDER"])
 cards=[];rail=[]
 for i,(t,sub,who,line,today,y36,steps) in enumerate(M,1):
     hl=" hl" if i==4 else ""
@@ -98,7 +100,7 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <div class="grid">{''.join(cards)}</div>
 <section class="path" id="path" aria-labelledby="path-h"><div class="eyebrow">Choose your path</div><h2 id="path-h">Where do you want to go first?</h2>
 <p class="note">Short invented scenes of life around 2036. The people are made up. This is our vision, not fact. Press Play, or step through with Next.</p>
-<div id="story" class="story"><noscript><p>The story scenes need JavaScript. The nine moments above work without it.</p></noscript></div></section>
+<div id="story" class="story"><div class="smenu" role="group" aria-label="Choose a path">{PATHS}</div><noscript><p>The story scenes need JavaScript. The nine moments above work without it.</p></noscript></div></section>
 <section class="vision" id="vision" aria-labelledby="vision-h"><div class="eyebrow">The vision</div><h2 id="vision-h">Our picture of about 2036</h2>
 <p class="tag"><b>Our vision, not fact.</b> Nothing on this page is a forecast or a promise. It is where we think this could go.</p>
 <div class="vgrid">

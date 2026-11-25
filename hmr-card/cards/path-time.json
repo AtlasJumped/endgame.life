@@ -1,0 +1,78 @@
+{
+ "schema": "hmr-card/1",
+ "id": "path-time",
+ "title": "Saving time",
+ "intro": "A short made-up story about Sam, an invented person, in our vision of about 2036. Agents work on their own, and Sam answers only when needed. Nothing here is real and nothing is sent.",
+ "frame": "16:9",
+ "screen": "path",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Sam is an invented person, and nothing is sent. Forms, scheduling, and follow-ups are the first things agents take over.",
+   "act": [
+    [
+     "show",
+     "time.s1"
+    ]
+   ]
+  },
+  {
+   "say": "Most of it finishes without Sam. One item needs a human choice.",
+   "act": [
+    [
+     "hide",
+     "time.s1"
+    ],
+    [
+     "show",
+     "time.s2"
+    ],
+    [
+     "wait",
+     900
+    ],
+    [
+     "show",
+     "time.s2.v"
+    ],
+    [
+     "wait",
+     1500
+    ],
+    [
+     "show",
+     "time.s2.r"
+    ]
+   ]
+  },
+  {
+   "say": "The reply goes out in Sam's words. Total time Sam spent: a few seconds.",
+   "act": [
+    [
+     "hide",
+     "time.s2"
+    ],
+    [
+     "show",
+     "time.s3"
+    ]
+   ]
+  },
+  {
+   "say": "Sam's evening review is short because the drafts already sound like Sam.",
+   "act": [
+    [
+     "hide",
+     "time.s3"
+    ],
+    [
+     "show",
+     "time.s4"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/path-time.licence.json"
+}

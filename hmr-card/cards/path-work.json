@@ -1,0 +1,78 @@
+{
+ "schema": "hmr-card/1",
+ "id": "path-work",
+ "title": "Work",
+ "intro": "A short made-up story about Sam, an invented person, in our vision of about 2036. Agents work on their own, and Sam answers only when needed. Nothing here is real and nothing is sent.",
+ "frame": "16:9",
+ "screen": "path",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Sam is an invented person, and nothing is sent. Work stays at work and home stays at home. A firewall keeps work data out of personal tools and the other way round. Your employer decides what is allowed.",
+   "act": [
+    [
+     "show",
+     "work.s1"
+    ]
+   ]
+  },
+  {
+   "say": "Agents do the routine. Sam does the thinking only a person can do.",
+   "act": [
+    [
+     "hide",
+     "work.s1"
+    ],
+    [
+     "show",
+     "work.s2"
+    ]
+   ]
+  },
+  {
+   "say": "Something truly important shows up and the agent knows to interrupt.",
+   "act": [
+    [
+     "hide",
+     "work.s2"
+    ],
+    [
+     "show",
+     "work.s3"
+    ],
+    [
+     "wait",
+     900
+    ],
+    [
+     "show",
+     "work.s3.v"
+    ],
+    [
+     "wait",
+     1500
+    ],
+    [
+     "show",
+     "work.s3.r"
+    ]
+   ]
+  },
+  {
+   "say": "Done in seconds. Sam keeps working on the hard problem, then goes home. Work stays behind.",
+   "act": [
+    [
+     "hide",
+     "work.s3"
+    ],
+    [
+     "show",
+     "work.s4"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/path-work.licence.json"
+}

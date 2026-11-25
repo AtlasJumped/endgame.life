@@ -1,0 +1,91 @@
+{
+ "schema": "hmr-card/1",
+ "id": "path-overview",
+ "title": "Overview: how the world will probably change",
+ "intro": "A short made-up story about Sam, an invented person, in our vision of about 2036. Agents work on their own, and Sam answers only when needed. Nothing here is real and nothing is sent.",
+ "frame": "16:9",
+ "screen": "path",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Sam is an invented person, and nothing is sent. Your own agents handle the routine: messages, forms, bookings, quotes. They work on their own while you live your day.",
+   "act": [
+    [
+     "show",
+     "overview.s1"
+    ]
+   ]
+  },
+  {
+   "say": "Only what needs a human decision reaches you. A ping on the watch, a few spoken words, and the reply goes out.",
+   "act": [
+    [
+     "hide",
+     "overview.s1"
+    ],
+    [
+     "show",
+     "overview.s2"
+    ],
+    [
+     "wait",
+     900
+    ],
+    [
+     "show",
+     "overview.s2.v"
+    ],
+    [
+     "wait",
+     1500
+    ],
+    [
+     "show",
+     "overview.s2.r"
+    ]
+   ]
+  },
+  {
+   "say": "The reply is sent and the agent keeps going. Sam never stopped walking.",
+   "act": [
+    [
+     "hide",
+     "overview.s2"
+    ],
+    [
+     "show",
+     "overview.s3"
+    ]
+   ]
+  },
+  {
+   "say": "Over time you read what your agent drafts. Once you stop needing to change it, it can speak for you more often. You set the bar.",
+   "act": [
+    [
+     "hide",
+     "overview.s3"
+    ],
+    [
+     "show",
+     "overview.s4"
+    ]
+   ]
+  },
+  {
+   "say": "Screens fade into the background. A watch or a bracelet does the job of a phone, and more of us leave the phone at home. Money stays behind a physical key that only you switch on.",
+   "act": [
+    [
+     "hide",
+     "overview.s4"
+    ],
+    [
+     "show",
+     "overview.s5"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/path-overview.licence.json"
+}
