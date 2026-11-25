@@ -1,0 +1,70 @@
+{
+ "schema": "hmr-card/1",
+ "id": "moment-trip",
+ "title": "Moment 5: Planning a trip, One conversation, one itinerary",
+ "intro": "A short made-up storyboard from endgame.life. Lena plans a week by the sea without opening ten tabs. Nothing here is real and nothing is sent.",
+ "frame": "4:5",
+ "screen": "moment",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up example, nothing is sent. Lena says what she wants: a quiet week by the sea in April, under her budget.",
+   "act": [
+    [
+     "show",
+     "m5"
+    ],
+    [
+     "show",
+     "m5.s1"
+    ],
+    [
+     "move",
+     "m5.s1"
+    ]
+   ]
+  },
+  {
+   "say": "The calendar check finds April 12 to 19 free.",
+   "act": [
+    [
+     "show",
+     "m5.s2"
+    ],
+    [
+     "move",
+     "m5.s2"
+    ]
+   ]
+  },
+  {
+   "say": "A draft itinerary appears: train out, small inn, three walks, one day of nothing.",
+   "act": [
+    [
+     "show",
+     "m5.s3"
+    ],
+    [
+     "move",
+     "m5.s3"
+    ]
+   ]
+  },
+  {
+   "say": "Only after Lena says yes are any bookings made.",
+   "act": [
+    [
+     "show",
+     "m5.s4"
+    ],
+    [
+     "move",
+     "m5.s4"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/moment-trip.licence.json"
+}

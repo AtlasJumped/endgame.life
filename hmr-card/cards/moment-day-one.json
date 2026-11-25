@@ -1,0 +1,83 @@
+{
+ "schema": "hmr-card/1",
+ "id": "moment-day-one",
+ "title": "Moment 1: Day one, Setup rating",
+ "intro": "A short made-up storyboard from endgame.life. Maya opens her new dashboard for the first time. Nothing here is real and nothing is sent.",
+ "frame": "4:5",
+ "screen": "moment",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up example, nothing is sent. Maya opens her new dashboard, and it checks what it can read.",
+   "act": [
+    [
+     "show",
+     "m1"
+    ],
+    [
+     "show",
+     "m1.s1"
+    ],
+    [
+     "move",
+     "m1.s1"
+    ]
+   ]
+  },
+  {
+   "say": "Her setup rating is 35 of 100, based on what her assistant can actually read.",
+   "act": [
+    [
+     "show",
+     "m1.s2"
+    ],
+    [
+     "move",
+     "m1.s2"
+    ]
+   ]
+  },
+  {
+   "say": "Email, calendar, and tasks are connected.",
+   "act": [
+    [
+     "show",
+     "m1.s3"
+    ],
+    [
+     "move",
+     "m1.s3"
+    ]
+   ]
+  },
+  {
+   "say": "Money is missing. A read-only view would unlock spending and subscriptions.",
+   "act": [
+    [
+     "show",
+     "m1.s4"
+    ],
+    [
+     "move",
+     "m1.s4"
+    ]
+   ]
+  },
+  {
+   "say": "The next step is one connector, about two minutes, and her rating goes to 45.",
+   "act": [
+    [
+     "show",
+     "m1.s5"
+    ],
+    [
+     "move",
+     "m1.s5"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/moment-day-one.licence.json"
+}

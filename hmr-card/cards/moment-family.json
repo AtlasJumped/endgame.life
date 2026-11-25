@@ -1,0 +1,83 @@
+{
+ "schema": "hmr-card/1",
+ "id": "moment-family",
+ "title": "Moment 4: Family and friends, The people who matter, first",
+ "intro": "A short made-up storyboard from endgame.life. Dev never again misses a birthday or a long silence. Nothing here is real and nothing is sent.",
+ "frame": "4:5",
+ "screen": "moment",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up example, nothing is sent. Dev's dashboard starts with the birthdays coming soon.",
+   "act": [
+    [
+     "show",
+     "m4"
+    ],
+    [
+     "show",
+     "m4.s1"
+    ],
+    [
+     "move",
+     "m4.s1"
+    ]
+   ]
+  },
+  {
+   "say": "Nia's is in 6 days and Grandma Ruth's is in 19 days.",
+   "act": [
+    [
+     "show",
+     "m4.s2"
+    ],
+    [
+     "move",
+     "m4.s2"
+    ]
+   ]
+  },
+  {
+   "say": "It notices he last talked with Uncle Sam 74 days ago, and with old friend Jun 41 days ago.",
+   "act": [
+    [
+     "show",
+     "m4.s3"
+    ],
+    [
+     "move",
+     "m4.s3"
+    ]
+   ]
+  },
+  {
+   "say": "A message to Sam is drafted: thinking of you, free Sunday for a call? It waits for Dev's yes.",
+   "act": [
+    [
+     "show",
+     "m4.s4"
+    ],
+    [
+     "move",
+     "m4.s4"
+    ]
+   ]
+  },
+  {
+   "say": "Shared plans show Sunday 4 PM, a call with Sam, and Saturday, Nia's recital.",
+   "act": [
+    [
+     "show",
+     "m4.s5"
+    ],
+    [
+     "move",
+     "m4.s5"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/moment-family.licence.json"
+}

@@ -195,3 +195,7 @@ html[data-design="4"] .hero:before{background:none}
 html[data-design="4"] .moment.hl,html[data-design="4"] .urgent{background:linear-gradient(135deg,#14566a,#12343f)}
 html[data-design="4"] .pill{border-width:1px}
 .stage{scroll-margin-top:4.5rem}
+
+/* moments are static summaries now; the walkthrough runs in the card player */
+.moment .screen .step{opacity:1;transform:none}
+.moment .meter i{width:var(--w)}

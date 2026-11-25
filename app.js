@@ -1,15 +1,5 @@
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-// Storyboards
-document.querySelectorAll('.moment').forEach(m=>{
-  const steps=[...m.querySelectorAll('.screen .step')],btn=m.querySelector('.play'),st=m.querySelector('.status');
-  let timers=[];
-  const reset=()=>{timers.forEach(clearTimeout);timers=[];steps.forEach(s=>s.classList.remove('show'));m.removeAttribute('data-done')};
-  const done=()=>{m.setAttribute('data-done','1');btn.textContent='Replay';st.textContent='Done'};
-  btn.addEventListener('click',()=>{reset();btn.textContent='Playing';st.textContent='Playing';
-    if(reduce){steps.forEach(s=>s.classList.add('show'));done();return}
-    steps.forEach((s,i)=>timers.push(setTimeout(()=>{s.classList.add('show');st.textContent='Step '+(i+1)+' of '+steps.length;if(i===steps.length-1)timers.push(setTimeout(done,500))},500+i*750)))});
-  // nested step elements inside cols are pre-shown; reveal containers only
-});
+// Storyboards now run on the shared card player (hmr-card/). The page shows each moment as a static summary.
 // reveal on scroll, rail highlight
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');const id=e.target.id;document.querySelectorAll('.rail a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id))}}),{threshold:.3});
 document.querySelectorAll('.moment').forEach(m=>io.observe(m));

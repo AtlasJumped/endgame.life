@@ -68,6 +68,8 @@ M=[
   ("warn","<b>Calendar, mail, money</b> private"),
   ("draft","<b>Your page</b><small>endgame life, Noor, woodworker</small>")]),
 ]
+SL=["day-one","morning","inbox","family","trip","fun","work","money","profile"]
+GUARD='<script>/* hmr-card fallback: if the card player never loads, demo buttons open a still picture */(function(){var d=document,w=window,up=0;if(!d.addEventListener)return;w.addEventListener("load",function(){up=1},false);d.addEventListener("click",function(e){if(!up||w.HMRCard)return;var t=e.target;while(t&&t.getAttribute&&!t.getAttribute("data-hmr-card"))t=t.parentNode;if(t&&t.getAttribute){e.preventDefault();w.location.href="hmr-card/still.html"}},false)})();</script>\n'
 cards=[];rail=[]
 for i,(t,sub,who,line,today,y36,steps) in enumerate(M,1):
     hl=" hl" if i==4 else ""
@@ -77,7 +79,7 @@ for i,(t,sub,who,line,today,y36,steps) in enumerate(M,1):
 <div class="num">MOMENT {i} OF 9</div><h3>{html.escape(t)}: {html.escape(sub)}{badge}</h3>
 <p class="who"><b>{html.escape(who.split(',')[0])}</b>,{html.escape(who.split(',',1)[1])}. {html.escape(line)}</p>
 <div class="screen" aria-live="polite"><div class="bar"><span>Dashboard</span><span>{html.escape(t)}</span></div><div class="fw">{st}</div></div>
-<div class="ctl"><button class="pill solid play" type="button">Press play</button><span class="status">Ready</span></div>
+<div class="ctl"><button class="pill solid" type="button" data-hmr-card="moment-{SL[i-1]}" aria-label="Press play: {html.escape(t)}">Press play</button></div>
 <div class="labels"><p class="today"><b>Works today</b>{html.escape(today.split(': ',1)[1][0].upper()+today.split(': ',1)[1][1:])}</p><p class="y36"><b>In 2036</b>{html.escape(y36.split(': ',1)[1][0].upper()+y36.split(': ',1)[1][1:])}</p></div></article>""")
     rail.append(f'<a href="#m{i}" aria-label="Moment {i}: {html.escape(t)}"><span>{i}. {html.escape(t)}</span></a>')
 page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -118,5 +120,6 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <p><a class="pill solid" href="https://claudebomb.com">Start today at claudebomb.com</a></p></section></main>
 <footer><p><a href="https://claudebomb.com">Start now: claudebomb.com</a> &nbsp; <a href="https://hmrfamily.life">The HMR family: hmrfamily.life</a></p>Endgame Life is the vision site for <a href="https://claudebomb.com">claudebomb.com</a>. Three.js is used under the MIT license (vendor/three.LICENSE.txt).</footer>
 <script type="module" src="app.js"></script><script src="extra.js" defer></script>
-<script src="hmr-dock.js" data-site="endgame.life" data-design=".dfab" data-design-panel=".dpanel" defer></script></body></html>"""
+{GUARD}<script src="hmr-card/hmr-card.js?v=3" defer></script>
+<script src="hmr-dock.js?v=6.4.1" data-site="endgame.life" data-design=".dfab" data-design-panel=".dpanel" defer></script></body></html>"""
 open("index.html","w").write(page)

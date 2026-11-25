@@ -1,0 +1,70 @@
+{
+ "schema": "hmr-card/1",
+ "id": "moment-fun",
+ "title": "Moment 6: Have fun, Your house and your town",
+ "intro": "A short made-up storyboard from endgame.life. Amara finds tonight's plan without scrolling. Nothing here is real and nothing is sent.",
+ "frame": "4:5",
+ "screen": "moment",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up example, nothing is sent. Amara's dashboard knows what is in the house: board games, a guitar, flour and eggs.",
+   "act": [
+    [
+     "show",
+     "m6"
+    ],
+    [
+     "show",
+     "m6.s1"
+    ],
+    [
+     "move",
+     "m6.s1"
+    ]
+   ]
+  },
+  {
+   "say": "It lists what is near her tonight: an open mic at 8 and a free outdoor film at 9.",
+   "act": [
+    [
+     "show",
+     "m6.s2"
+    ],
+    [
+     "move",
+     "m6.s2"
+    ]
+   ]
+  },
+  {
+   "say": "It suggests an idea: bake first, then walk to the open mic.",
+   "act": [
+    [
+     "show",
+     "m6.s3"
+    ],
+    [
+     "move",
+     "m6.s3"
+    ]
+   ]
+  },
+  {
+   "say": "Horror is left out, as she asked.",
+   "act": [
+    [
+     "show",
+     "m6.s4"
+    ],
+    [
+     "move",
+     "m6.s4"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/moment-fun.licence.json"
+}

@@ -1,0 +1,70 @@
+{
+ "schema": "hmr-card/1",
+ "id": "moment-money",
+ "title": "Moment 8: Money, Read-only, always",
+ "intro": "A short made-up storyboard from endgame.life. Rosa sees where her money goes and cannot lose it by accident. Nothing here is real and nothing is sent.",
+ "frame": "4:5",
+ "screen": "moment",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up example, nothing is sent. Rosa sees this month: groceries, rent, supplies.",
+   "act": [
+    [
+     "show",
+     "m8"
+    ],
+    [
+     "show",
+     "m8.s1"
+    ],
+    [
+     "move",
+     "m8.s1"
+    ]
+   ]
+  },
+  {
+   "say": "It found 7 subscriptions, and 2 have gone unused for 90 days.",
+   "act": [
+    [
+     "show",
+     "m8.s2"
+    ],
+    [
+     "move",
+     "m8.s2"
+    ]
+   ]
+  },
+  {
+   "say": "It flags a charge twice the usual amount.",
+   "act": [
+    [
+     "show",
+     "m8.s3"
+    ],
+    [
+     "move",
+     "m8.s3"
+    ]
+   ]
+  },
+  {
+   "say": "Access is read-only, so no button here moves money.",
+   "act": [
+    [
+     "show",
+     "m8.s4"
+    ],
+    [
+     "move",
+     "m8.s4"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/moment-money.licence.json"
+}

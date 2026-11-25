@@ -1,0 +1,70 @@
+{
+ "schema": "hmr-card/1",
+ "id": "moment-inbox",
+ "title": "Moment 3: Inbox, Drafted replies, never sent without a yes",
+ "intro": "A short made-up storyboard from endgame.life. Priya clears forty messages in five minutes. Nothing here is real and nothing is sent.",
+ "frame": "4:5",
+ "screen": "moment",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up example, nothing is sent. Priya's inbox sorts 40 messages: 3 need a reply, 5 are waiting, and 32 are for information only.",
+   "act": [
+    [
+     "show",
+     "m3"
+    ],
+    [
+     "show",
+     "m3.s1"
+    ],
+    [
+     "move",
+     "m3.s1"
+    ]
+   ]
+  },
+  {
+   "say": "A short draft to the agency is ready in her voice: thanks, I can deliver Thursday.",
+   "act": [
+    [
+     "show",
+     "m3.s2"
+    ],
+    [
+     "move",
+     "m3.s2"
+    ]
+   ]
+  },
+  {
+   "say": "She can edit it, and Send waits for her.",
+   "act": [
+    [
+     "show",
+     "m3.s3"
+    ],
+    [
+     "move",
+     "m3.s3"
+    ]
+   ]
+  },
+  {
+   "say": "Only when Priya taps Send does anything leave.",
+   "act": [
+    [
+     "show",
+     "m3.s4"
+    ],
+    [
+     "move",
+     "m3.s4"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/moment-inbox.licence.json"
+}

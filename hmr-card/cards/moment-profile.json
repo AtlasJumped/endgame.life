@@ -1,0 +1,83 @@
+{
+ "schema": "hmr-card/1",
+ "id": "moment-profile",
+ "title": "Moment 9: Public profile, Share only what you choose",
+ "intro": "A short made-up storyboard from endgame.life. Noor shares one page and nothing else. Nothing here is real and nothing is sent.",
+ "frame": "4:5",
+ "screen": "moment",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up example, nothing is sent. Noor chooses what to share on a public page.",
+   "act": [
+    [
+     "show",
+     "m9"
+    ],
+    [
+     "show",
+     "m9.s1"
+    ],
+    [
+     "move",
+     "m9.s1"
+    ]
+   ]
+  },
+  {
+   "say": "Projects are shared.",
+   "act": [
+    [
+     "show",
+     "m9.s2"
+    ],
+    [
+     "move",
+     "m9.s2"
+    ]
+   ]
+  },
+  {
+   "say": "Hours are shared.",
+   "act": [
+    [
+     "show",
+     "m9.s3"
+    ],
+    [
+     "move",
+     "m9.s3"
+    ]
+   ]
+  },
+  {
+   "say": "Calendar, mail, and money stay private.",
+   "act": [
+    [
+     "show",
+     "m9.s4"
+    ],
+    [
+     "move",
+     "m9.s4"
+    ]
+   ]
+  },
+  {
+   "say": "Noor's page shows only: endgame life, Noor, woodworker.",
+   "act": [
+    [
+     "show",
+     "m9.s5"
+    ],
+    [
+     "move",
+     "m9.s5"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/moment-profile.licence.json"
+}

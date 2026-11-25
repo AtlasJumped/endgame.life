@@ -1,0 +1,83 @@
+{
+ "schema": "hmr-card/1",
+ "id": "moment-morning",
+ "title": "Moment 2: Morning, Ranked to-do list and voice journal",
+ "intro": "A short made-up storyboard from endgame.life. Tomas starts the day with a plan he did not have to write. Nothing here is real and nothing is sent.",
+ "frame": "4:5",
+ "screen": "moment",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up example, nothing is sent. Tomas opens his dashboard at 6:42 AM, and today's plan is already there.",
+   "act": [
+    [
+     "show",
+     "m2"
+    ],
+    [
+     "show",
+     "m2.s1"
+    ],
+    [
+     "move",
+     "m2.s1"
+    ]
+   ]
+  },
+  {
+   "say": "First is to submit the lab report. It is due at noon and his professor is waiting.",
+   "act": [
+    [
+     "show",
+     "m2.s2"
+    ],
+    [
+     "move",
+     "m2.s2"
+    ]
+   ]
+  },
+  {
+   "say": "Second is to call the landlord, because he said this matters.",
+   "act": [
+    [
+     "show",
+     "m2.s3"
+    ],
+    [
+     "move",
+     "m2.s3"
+    ]
+   ]
+  },
+  {
+   "say": "Third is to buy rice and eggs.",
+   "act": [
+    [
+     "show",
+     "m2.s4"
+    ],
+    [
+     "move",
+     "m2.s4"
+    ]
+   ]
+  },
+  {
+   "say": "His voice journal is saved to his private notes: slept badly, but the lab report is nearly done.",
+   "act": [
+    [
+     "show",
+     "m2.s5"
+    ],
+    [
+     "move",
+     "m2.s5"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/moment-morning.licence.json"
+}

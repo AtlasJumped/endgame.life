@@ -1,0 +1,57 @@
+{
+ "schema": "hmr-card/1",
+ "id": "moment-work",
+ "title": "Moment 7: Work, Behind a privacy firewall",
+ "intro": "A short made-up storyboard from endgame.life. Jonas keeps work at work and home at home. Nothing here is real and nothing is sent.",
+ "frame": "4:5",
+ "screen": "moment",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Made-up example, nothing is sent. Jonas sees his work day and his personal day side by side.",
+   "act": [
+    [
+     "show",
+     "m7"
+    ],
+    [
+     "show",
+     "m7.s1"
+    ],
+    [
+     "move",
+     "m7.s1"
+    ]
+   ]
+  },
+  {
+   "say": "A firewall keeps the dentist off the work calendar and the budget off the personal side.",
+   "act": [
+    [
+     "show",
+     "m7.s2"
+    ],
+    [
+     "move",
+     "m7.s2"
+    ]
+   ]
+  },
+  {
+   "say": "When an item is unsure, the assistant asks which side it belongs to.",
+   "act": [
+    [
+     "show",
+     "m7.s3"
+    ],
+    [
+     "move",
+     "m7.s3"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/moment-work.licence.json"
+}
