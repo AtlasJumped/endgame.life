@@ -199,3 +199,37 @@ html[data-design="4"] .pill{border-width:1px}
 /* moments are static summaries now; the walkthrough runs in the card player */
 .moment .screen .step{opacity:1;transform:none}
 .moment .meter i{width:var(--w)}
+/* How far we are (vision) */
+.far{margin:1.6rem 0 0;border:2px solid var(--line);border-radius:var(--r);padding:1.2rem;background:var(--bg2)}
+.far h3{margin:0 0 .3rem;letter-spacing:-.03em;font-size:1.3rem}
+.farl{list-style:none;margin:1rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem}
+.farl li{border:1px solid #fff6e055;border-radius:1rem;padding:.7rem .9rem}
+.farl b{display:block;margin:.35rem 0 .15rem}.farl small{display:block;color:var(--mut);font-size:.9rem}
+.st{display:inline-block;font-family:var(--mono);font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:99px;padding:.12rem .6rem;color:var(--ink)}
+.st.yes{background:#9fe38a}.st.part{background:var(--gold)}.st.no{background:#ffb4a3}
+/* Why not now (pitch) */
+.pitch{padding:3rem 0 1rem;scroll-margin-top:4rem}
+.pitch h2{font-size:clamp(1.8rem,4.5vw,3rem);letter-spacing:-.04em;line-height:1.05;margin:.3rem 0 .8rem}
+.pitch .big{font-size:clamp(1.05rem,2.2vw,1.3rem);max-width:44rem}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin:1.5rem 0}
+.pgrid .vcard h3{margin-top:0}
+.want{margin:.4rem 0;padding-left:1.2rem}.want li{margin:.25rem 0}
+.pitch .block{border:2px solid var(--gold);border-radius:var(--r);padding:1rem 1.2rem;margin:0 0 1.2rem}
+.pitch .block h3{margin:0 0 .3rem}
+.pitch .mission{margin-bottom:1rem}
+.pitch .note{color:var(--mut)}
+@media(max-width:820px){.pgrid,.farl{grid-template-columns:1fr}}
+/* Optional feedback pop-up near the bottom */
+.egfb{position:fixed;left:.6rem;right:.6rem;bottom:calc(5.4rem + env(safe-area-inset-bottom,0px));margin:0 auto;max-width:34rem;max-height:calc(100vh - 8rem);max-height:calc(100svh - 8rem);overflow:auto;z-index:9000;background:var(--bg2);color:var(--fg);border:2px solid var(--acc);border-radius:1.2rem;padding:1rem 1.1rem 1.1rem;box-shadow:0 18px 50px #0009}
+.egfb[hidden]{display:none}
+.egfb h3{margin:.2rem 0 .7rem 2.4rem;font-size:1.15rem;letter-spacing:-.02em;line-height:1.2}
+.egx{position:absolute;top:.6rem;left:.6rem;width:2.2rem;height:2.2rem;border-radius:50%;border:2px solid var(--line);background:transparent;color:var(--fg);font-size:1.3rem;line-height:1;cursor:pointer}
+.egfb fieldset{border:0;margin:0 0 .6rem;padding:0;display:flex;flex-wrap:wrap;gap:.3rem .9rem}
+.egfb legend{font-weight:800;margin-bottom:.3rem;padding:0;width:100%}
+.egfb .fl{display:block;font-weight:800;margin:.6rem 0 .25rem}
+.egfb input[type=text],.egfb input[type=email],.egfb textarea{width:100%;font:inherit;font-size:16px;padding:.5rem .7rem;border-radius:.7rem;border:2px solid #fff6e088;background:var(--bg);color:var(--fg)}
+.egfb .chk{display:flex;gap:.5rem;align-items:flex-start;font-weight:800;margin:.8rem 0 .2rem}
+.egfb .chk input{margin-top:.3rem}
+.egfb .small{font-size:.82rem;color:var(--mut);margin:.6rem 0}
+.egfb .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.egfb [data-hmr-anon-status]{margin:.5rem 0 0;font-weight:700}

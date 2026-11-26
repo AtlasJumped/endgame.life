@@ -85,4 +85,30 @@ copy.addEventListener("click",function(){
   if(!ok){var t=document.createElement("textarea");t.className="cfall";t.value=text;t.readOnly=true;panel.appendChild(t);t.focus();t.select()}}
  try{navigator.clipboard.writeText(text).then(function(){done(true)},function(){done(false)})}catch(e){done(false)}
 });
+
+/* ---------- Optional feedback pop-up near the bottom ---------- */
+(function(){
+ var box=document.getElementById("egfb"),f=document.getElementById("egfb-f");
+ if(!box||!f)return;
+ var K="endgame.feedback.v1",last=null;
+ function get(){try{return localStorage.getItem(K)}catch(e){return null}}
+ function put(v){try{localStorage.setItem(K,v)}catch(e){}}
+ function open(){if(!box.hidden)return;last=document.activeElement;box.hidden=false;var q=box.querySelector("input");if(q)try{q.focus({preventScroll:true})}catch(e){q.focus()}}
+ function close(){box.hidden=true;if(get()!=="sent")put("closed");if(last&&last.focus)try{last.focus({preventScroll:true})}catch(e){}}
+ box.querySelector("[data-egfb-close]").addEventListener("click",close);
+ box.addEventListener("keydown",function(e){if(e.key==="Escape"){e.stopPropagation();close()}});
+ [].forEach.call(document.querySelectorAll("[data-egfb-open]"),function(b){b.addEventListener("click",open)});
+ /* Shows itself once, when the visitor reaches the honest note at the bottom. The X closes it for good on this device. */
+ var note=document.getElementById("note");
+ if(note&&!get()&&"IntersectionObserver" in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.disconnect();if(!get())open()}})},{threshold:.25});
+  io.observe(note);
+ }
+ f.addEventListener("submit",function(e){
+  var want=document.getElementById("egfb-d");
+  if(want&&want.checked){try{window.open("https://personaldash.life/","_blank","noopener")}catch(x){}}
+  put("sent");
+  if(!window.HMRDock){e.preventDefault();var st=f.querySelector("[data-hmr-anon-status]");if(st)st.textContent="Sending is not available right now. Thank you for trying."}
+ });
+})();
 })();
