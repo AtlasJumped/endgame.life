@@ -165,6 +165,6 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 </form></div>
 <script type="module" src="app.js"></script><script src="extra.js" defer></script>
 {GUARD}<script src="hmr-card/hmr-card.js?v=4" defer></script>
-<script src="hmr-dock.js?v=6.6.1" data-site="endgame.life" data-design=".dfab" data-design-panel=".dpanel" defer></script><script src="https://hmrfamily.life/x/hmr-aud.js?v=1" defer></script>
+<script src="hmr-dock.js?v=6.8.2" data-site="endgame.life" data-design=".dfab" data-design-panel=".dpanel" defer></script><script src="https://hmrfamily.life/x/hmr-aud.js?v=1" defer></script>
 </body></html>"""
 open("index.html","w").write(page)
