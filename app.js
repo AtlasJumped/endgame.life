@@ -31,7 +31,7 @@ if(!('IntersectionObserver' in window))document.querySelectorAll('.moment').forE
       const p=g.attributes.position.array;
       for(let i=0;i<base.length;i++){const [x,z]=base[i];p[i*3+1]=Math.sin(x*.5+t*.0006)*.35+Math.cos(z*.4+t*.0005)*.35}
       g.attributes.position.needsUpdate=true;
-      const rise=reduce?.45:Math.min(.25+t*.00003,.6);
+      const rise=reduce?.45:Math.min(.25+t*.000015,.6);
       sun.position.y=-6+rise*18+sy*8;halo.position.y=sun.position.y;
       cam.position.x+=((mx*4)-cam.position.x)*.05;cam.position.y+=((3-my*1.5-sy*1.5)-cam.position.y)*.05;cam.lookAt(0,1+sy*2,-20);
       r.setClearColor(0x000000,0);r.render(scene,cam);

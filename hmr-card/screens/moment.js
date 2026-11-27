@@ -25,7 +25,7 @@ var D = {
   "steps": [
    [
     "",
-    "<b>Survey</b><small>Checking what can be read: email, calendar, tasks, files, money, fun</small>"
+    "<b>Assessing environment</b><small>Checking what can be read: email, calendar, tasks, files, money, fun</small>"
    ],
    [
     "",

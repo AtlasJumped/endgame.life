@@ -4,7 +4,7 @@ M=[
 ("Day one","Setup rating","Maya, a nurse and part-time painter","Maya opens her new dashboard for the first time.",
  "Today: the setup rating, the connected areas, and the next connectors to add are real parts of the free personaldash.life dashboard, which starts as text you paste into your AI assistant. It scores 1 to 100 from what your assistant can actually read.",
  "In 2036: connecting an area takes one tap, and every service offers a safe read-only door, so most people start above 70.",
- [("","<b>Survey</b><small>Checking what can be read: email, calendar, tasks, files, money, fun</small>"),
+ [("","<b>Assessing environment</b><small>Checking what can be read: email, calendar, tasks, files, money, fun</small>"),
   ("","<b>Setup rating</b> 35 of 100<div class='meter'><i style='--w:35%'></i></div>"),
   ("ok","<b>Connected</b> Email, calendar, tasks"),
   ("warn","<b>Missing</b> Money (read-only) would unlock spending and subscriptions"),
@@ -89,14 +89,16 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <meta name="description" content="If the free personal AI dashboard at personaldash.life succeeds, this is what life looks like in 2036. A vision, with each claim labeled.">
 <link rel="stylesheet" href="style.css"><style>header .hacts{{display:flex;gap:.5rem;align-items:center;flex:none;margin-left:auto}}@media(min-width:821px){{header .hacts{{margin-left:0}}}}header .hacts .pill{{white-space:nowrap}}@media(max-width:560px){{header .hacts .pill{{padding:.45rem .75rem;font-size:.85rem}}header .hacts .hx{{display:none}}}}</style></head><body>
 <a class="skip" href="#moments">Skip to the moments</a>
+<div class="elv8-cap" data-elv8-cap role="note" style="font:13px/1.45 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;text-align:center;padding:6px 12px;background:#fffdf8;color:#4a4760;border-bottom:1px solid #e8e3d6;position:fixed;top:0;left:0;right:0;z-index:40">This website is owned by the person who owns this website. <a href="https://elevat.ing/" style="color:inherit;font-weight:700">elevat.ing</a></div>
 <header><a class="logo" href="#top">endgame<b>.</b>life</a><nav class="hnav" aria-label="Sections"><a href="#path">Choose your path</a><a href="#vision">The vision</a><a href="#pitch">Why not now?</a></nav><span class="hacts"><button type="button" class="pill" data-hmr-login aria-label="Log in (coming soon)">Log in</button><a class="pill solid" href="https://personaldash.life" aria-label="Start now: personaldash.life">Start now<span class="hx">: personaldash.life</span></a></span></header>
 <nav class="rail" aria-label="Moments">{''.join(rail)}</nav>
 <section class="hero" id="top"><canvas id="gl" aria-hidden="true"></canvas>
-<div class="hero-in"><div class="eyebrow">A vision of 2036</div><h1>One dashboard. <em>Your whole life</em> in view.</h1>
+<div class="hero-in"><p class="tg-line" style="margin:0 0 .6rem;font-weight:700;opacity:.9">Happy Thanksgiving 2026. Our goal is to take all of the best content from across the internet and consolidate it into one always free, ad-free hub of human innovation. By this time next year, the world will be a totally different place.</p><div class="eyebrow">A vision of 2036</div><h1>One dashboard. <em>Your whole life</em> in view.</h1>
 <p class="lede">Imagine everyone has a calm page that runs the day: the plan, the inbox, the people, the trip, the fun. Nine moments from people who live that way, each labeled for what works today and what is still a hope.</p>
 <div class="cue"><a class="pill solid" href="#moments">See the nine moments</a><a class="pill" href="https://personaldash.life">Start today</a></div></div></section>
 <main id="moments"><section class="intro"><div class="eyebrow">If personaldash.life succeeds</div><h2>This is life in 2036.</h2>
-<p>Each person below is invented. Press play to watch a short storyboard. Under each one, <b>Works today</b> says what you can do now with the free dashboard at personaldash.life. <b>In 2036</b> says what we hope will be true.</p></section>
+<p>Each person below is invented. Press play to watch a short storyboard. Under each one, <b>Works today</b> says what you can do now with the free dashboard at personaldash.life. <b>In 2036</b> says what we hope will be true.</p>
+<p class="soon"><b>We are really not that far.</b> We built this as a ten-year vision. If everybody jumps on it today, it is more like a one-year vision. The only thing missing is open-source contributions. If this site blows up, everybody could have this technology at the beginning of 2027: about 90% of it in the first couple of months, then the integrations. With smart-home links like Zigbee and Wi-Fi, that means almost everything in your home.</p></section>
 <div class="grid">{''.join(cards)}</div>
 <section class="path" id="path" aria-labelledby="path-h"><div class="eyebrow">Choose your path</div><h2 id="path-h">Where do you want to go first?</h2>
 <p class="note">Short invented scenes of life around 2036. The people are made up. This is our vision, not fact. Press Play, or step through with Next.</p>
@@ -109,6 +111,7 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <article class="vcard"><div class="db" aria-hidden="true"><b></b><b></b><b></b></div><h3>Your agent learns you, in your own database</h3><p>It records what you say and learns about you. The record is stored in a database that belongs to you, not to an app company.</p></article>
 <article class="vcard"><div class="keyd"><button class="keysw" type="button" aria-pressed="false"><span class="knob"></span><span class="kl">Locked</span></button></div><h3>Danger assets stay behind a physical key</h3><p>Money is the main danger asset. We picture a hardware key that you carry, or keep in a lockbox at home, with a manual switch. Nothing that moves money works until you flip it. Try the switch.</p><p class="state" aria-live="polite">Money is locked. No agent can move it.</p></article>
 <article class="vcard"><div class="pair" aria-hidden="true"><div><b>You</b><small>voice, habits, places match</small></div><div class="fake"><b>Fake</b><small>does not match</small></div></div><h3>Oversharing with the right ally protects you</h3><p>Our idea is that if your agent holds your voice and your activity, it can tell the real you from a fake, so a stolen ID matters much less once money is locked. Whether this holds up against fast-improving fakes is <b>unknown</b>. It needs testing.</p></article>
+<article class="vcard"><div class="home" aria-hidden="true"><span></span><span></span><span></span><span></span></div><h3>A home that runs itself</h3><p>Every light and every plug is automated. The thermostat, the door locks, the garage door, even the ceiling fans answer to your dashboard. Lights and heating turn off when nobody needs them, which saves money. Air filters check the air quality and switch on by themselves, which protects your health. Cameras are there only if you choose them.</p></article>
 <article class="vcard"><div class="wear" aria-hidden="true"><span></span></div><h3>Fewer screens, more faces</h3><p>A watch or a bracelet does what a phone does, so more of us leave the phone at home. We hope the time saved goes to looking at each other.</p></article>
 </div>
 <div class="urgent"><h3>Why this is urgent</h3><p>Phone AI may soon be controlled by a few companies. If that happens before an open picture exists, the open-source community loses its grip. We want to share this vision first, and build it together as an open-source community.</p></div>
@@ -119,12 +122,14 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <li><span class="st part">Partly here</span><b>A record of you that you own</b><small>You can keep your own notes and files. An agent that learns from a database you control is not the default anywhere.</small></li>
 <li><span class="st yes">Here today, early</span><b>One dashboard for your day</b><small>The free personal dashboard at personaldash.life works now, with the assistant you already use.</small></li>
 <li><span class="st part">Partly here</span><b>Read-only connections everywhere</b><small>Many services connect to assistants. Read-only access as a standard setting, especially at banks, is rare.</small></li>
+<li><span class="st part">Partly here</span><b>A home run from the same dashboard</b><small>Smart lights, plugs, thermostats, locks, and air filters exist today and connect over Zigbee and Wi-Fi. One open dashboard for all of them is not standard yet.</small></li>
 <li><span class="st no">Not yet</span><b>A physical key for money</b><small>An idea of ours. Nobody sells it as described.</small></li>
 <li><span class="st part">Starting</span><b>Built in the open, by everyone</b><small>That part is up to us. It is why this page exists.</small></li>
 </ul></div>
-<div class="links"><a class="pill solid" href="https://personaldash.life">Start now: personaldash.life</a><a class="pill" href="https://hmrfamily.life">The HMR family: hmrfamily.life</a></div></section>
+<div class="links"><a class="pill solid" href="https://personaldash.life">Start now: personaldash.life</a><a class="pill" href="https://elevat.ing/">The elevat.ing family of websites</a></div></section>
 <section class="pitch" id="pitch" aria-labelledby="pitch-h"><div class="eyebrow">Why not now?</div><h2 id="pitch-h">There is no good reason not to have this today.</h2>
 <p class="big">This vision is not far off. It is around the corner. The tools mostly exist. The only thing missing is people building it together, in the open.</p>
+<p>We describe the absolute endgame of what AI can do at its best, and then we say: we are really not that far. It is built as a ten-year vision. If everybody jumps on it today, it is a one-year vision.</p>
 <div class="pgrid">
 <article class="vcard"><h3>Imagine</h3><p>Imagine the world's best engineer and the world's best designer took all of humanity's tools and made the one best tool for you. What would it be?</p><p>We think it would be a dashboard: one place you open on your phone or your computer, a one-stop shop for everything you want.</p><p>And it still would not be as good as what the whole world could make together in an open-source effort. The world's best engineer is all of us.</p></article>
 <article class="vcard"><h3>What "everything you want" means</h3><ul class="want"><li>Control over your time</li><li>Control over your money</li><li>Your family and relationships</li><li>Your power: where you stand, how to grow it, how to protect it</li><li>Fun</li><li>Good health</li><li>High productivity</li><li>More happiness, and less suffering, per hour</li><li>Less time on things you do not enjoy</li><li>More confidence that your actions are the best ones for your mission</li></ul></article>
@@ -137,7 +142,7 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <li>Safe, read-only access is not yet standard at banks and apps.</li>
 <li>Not enough of us are building it yet.</li>
 </ul><p>Help us build this list. <button type="button" class="pill" data-egfb-open>Tell us what is blocking it</button></p></div>
-<div class="urgent mission"><h3>Your mission statement</h3><p>We want every person alive to have their own mission statement: something you can read when you wake up and say, "This is why I woke up this morning. This is what I am doing."</p><p>Right now most of us could not say what our mission is if asked. You can live aimlessly or with purpose, and if you live with purpose, you have a mission. Whether it is to enjoy life, build something, or help others does not matter.</p><p><b>If you cannot say what your mission is right now, reading this, you owe it to yourself to take part.</b></p></div>
+<div class="urgent mission"><h3>Your mission statement</h3><p>We want every person alive to have their own mission statement: something you can read when you wake up and say, "This is why I woke up this morning. This is what I am doing."</p><p>Right now most of us could not say what our mission is if asked. You can live aimlessly or with purpose, and if you live with purpose, you have a mission. Whether it is to enjoy life, build something, or help others does not matter.</p><p><b>If you cannot say what your mission is right now, reading this, you owe it to yourself to participate.</b></p></div>
 <p class="links"><a class="pill solid" href="https://personaldash.life">Here is the dashboard you can use today</a></p>
 <p class="note">It is simple today, and it is already good. The vision is to make it beautiful for all of humanity, together.</p>
 </section>
@@ -148,7 +153,7 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <div class="card b"><h3>Hoped for</h3><ul><li>One tap to connect most services.</li><li>Standard read-only access at banks and apps.</li><li>Drafts that sound like you.</li><li>Shared plans among people who opt in.</li><li>Employers and people agreeing on a privacy firewall.</li></ul></div>
 <div class="card c"><h3>Unsolved</h3><ul><li>How to share dashboards safely when they touch work data.</li><li>Security risks, including malicious files and tricked assistants.</li><li>Whether assistants stay accurate enough to trust with drafts.</li><li>Whether companies will allow it.</li></ul></div></div>
 <p class="links"><a class="pill solid" href="https://personaldash.life">Start today at personaldash.life</a><button type="button" class="pill" data-egfb-open>Tell us what you think</button></p></section></main>
-<footer><p><a href="https://personaldash.life">Start now: personaldash.life</a> &nbsp; <a href="https://hmrfamily.life">The HMR family: hmrfamily.life</a></p>Endgame Life is the vision site for the HMR dashboards: <a href="https://personaldash.life">personaldash.life</a>, free today, and <a href="https://workdash.life">workdash.life</a>, the work version we are building next. Free prompts: <a href="https://claudebomb.com">claudebomb.com</a>. Three.js is used under the MIT license (vendor/three.LICENSE.txt).</footer>
+<footer><p><a href="https://personaldash.life">Start now: personaldash.life</a> &nbsp; <a href="https://elevat.ing/">The elevat.ing family of websites</a></p>Endgame Life is the vision site for our dashboards: <a href="https://personaldash.life">personaldash.life</a>, free today, and <a href="https://workdash.life">workdash.life</a>, the work version we are building next. Free prompts: <a href="https://claudebomb.com">claudebomb.com</a>. Three.js is used under the MIT license (vendor/three.LICENSE.txt).</footer>
 <div class="egfb" id="egfb" role="dialog" aria-modal="false" aria-labelledby="egfb-h" hidden>
 <button type="button" class="egx" aria-label="Close, this is optional" data-egfb-close>&times;</button>
 <form data-hmr-anon-form action="#" id="egfb-f">
@@ -156,7 +161,7 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <fieldset><legend>1. Do you think this is a good idea?</legend><label><input type="radio" name="good_idea" value="Yes"> Yes</label><label><input type="radio" name="good_idea" value="Not sure"> Not sure</label><label><input type="radio" name="good_idea" value="No"> No</label></fieldset>
 <label class="fl" for="egfb-b">2. Is somebody else already doing it better? If so, a link</label><input id="egfb-b" name="doing_it_better" type="text" inputmode="url" autocomplete="off" placeholder="https://">
 <label class="fl" for="egfb-e">3. Your email (optional)</label><input id="egfb-e" name="email" type="email" autocomplete="email">
-<label class="chk"><input type="checkbox" name="wants_dashboard" value="Yes" id="egfb-d"> 4. I want to try the free dashboard (opens personaldash.life)</label>
+<label class="chk"><input type="checkbox" name="wants_dashboard" value="Yes" id="egfb-d"> 4. I want to download the prototype (the free dashboard opens at personaldash.life when you press Submit)</label>
 <label class="fl" for="egfb-m">Anything else, like what is blocking this (optional)</label><textarea id="egfb-m" name="message" rows="3"></textarea>
 <input type="text" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 <p class="small">Nothing here is required. Your answers come to us so we can read them. Your email is used only to reply.</p>
@@ -166,5 +171,6 @@ page=f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="
 <script type="module" src="app.js"></script><script src="extra.js" defer></script>
 {GUARD}<script src="hmr-card/hmr-card.js?v=4" defer></script>
 <script src="hmr-dock.js?v=6.8.2" data-site="endgame.life" data-design=".dfab" data-design-panel=".dpanel" defer></script><script src="https://hmrfamily.life/x/hmr-aud.js?v=1" defer></script>
+<script>(function(){{var c=document.querySelector("[data-elv8-cap]"),h=document.querySelector("body>header");if(!c||!h)return;function f(){{var y=c.offsetHeight;h.style.top=y+"px";document.body.style.paddingTop=y+"px"}}f();addEventListener("resize",f)}})();</script>
 </body></html>"""
 open("index.html","w").write(page)

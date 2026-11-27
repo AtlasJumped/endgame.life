@@ -19,7 +19,6 @@ if(sw){var st=document.querySelector(".vcard .state");
 var DESIGNS=[
  {n:1,name:"Sunset (current)"},
  {n:2,name:"Paper"},
- {n:3,name:"Night terminal"},
  {n:4,name:"Calm sea"}
 ];
 var LEVELS=[["strong-like","Strong like"],["like","Like"],["dislike","Dislike"],["strong-dislike","Strong dislike"]];
@@ -27,7 +26,8 @@ var KEY="endgame.designRatings.v1";
 function load(){try{var r=localStorage.getItem(KEY);return r?JSON.parse(r)||{}:{}}catch(e){return {}}}
 function save(o){try{localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}}
 var ratings=load();
-function qdesign(){var m=/[?&]design=(\d)/.exec(location.search);var n=m?+m[1]:1;return n>=1&&n<=DESIGNS.length?n:1}
+function byN(n){return DESIGNS.filter(function(d){return d.n===n})[0]}
+function qdesign(){var m=/[?&]design=(\d)/.exec(location.search);var n=m?+m[1]:1;return byN(n)?n:1}
 var design=qdesign();
 function applyDesign(n,push){
  design=n;document.documentElement.setAttribute("data-design",String(n));
@@ -41,9 +41,17 @@ var ph=el("div","dph");ph.appendChild(el("b",null,"Pick a design"));
 var x=el("button","dx","×");x.type="button";x.setAttribute("aria-label","Close design picker");ph.appendChild(x);
 var tabs=el("div","dtabs");tabs.setAttribute("role","group");tabs.setAttribute("aria-label","Designs");
 var dbody=el("div","dbody");
-var copy=el("button","pill solid","Copy all ratings");copy.type="button";
-var cmsg=el("div","cmsg");cmsg.setAttribute("aria-live","polite");
-panel.appendChild(ph);panel.appendChild(tabs);panel.appendChild(dbody);panel.appendChild(copy);panel.appendChild(cmsg);
+/* Submit, like every design picker: "Submit with my email" (shows the email field) or "Submit anonymously". */
+var sub=el("div","dsub");
+var emr=el("div","demr");emr.hidden=true;
+var eml=el("label",null,"Your email, so we can reply");eml.setAttribute("for","dsub-em");
+var em=document.createElement("input");em.type="email";em.id="dsub-em";em.setAttribute("autocomplete","email");
+emr.appendChild(eml);emr.appendChild(em);
+var bMail=el("button","pill solid","Submit with my email");bMail.type="button";
+var bAnon=el("button","pill","Submit anonymously");bAnon.type="button";
+var cmsg=el("div","cmsg");cmsg.setAttribute("role","status");cmsg.setAttribute("aria-live","polite");
+sub.appendChild(emr);sub.appendChild(bMail);sub.appendChild(bAnon);
+panel.appendChild(ph);panel.appendChild(tabs);panel.appendChild(dbody);panel.appendChild(sub);panel.appendChild(cmsg);
 document.body.appendChild(fab);document.body.appendChild(panel);
 
 function renderPanel(){
@@ -55,7 +63,7 @@ function renderPanel(){
   tabs.appendChild(b);
  });
  dbody.textContent="";
- var d=DESIGNS[design-1],r=ratings[design]||{};
+ var d=byN(design)||DESIGNS[0],r=ratings[design]||{};
  dbody.appendChild(el("p","dname","Design "+d.n+": "+d.name));
  var fs=el("fieldset","dfs");fs.appendChild(el("legend",null,"Your rating"));
  LEVELS.forEach(function(L){
@@ -76,15 +84,26 @@ function closePanel(){panel.hidden=true;fab.setAttribute("aria-expanded","false"
 fab.addEventListener("click",function(){panel.hidden?openPanel():closePanel()});
 x.addEventListener("click",closePanel);
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!panel.hidden){e.preventDefault();closePanel()}});
-copy.addEventListener("click",function(){
+function ratingText(){
  var lines=["Endgame Life design ratings"];
  DESIGNS.forEach(function(d){var r=ratings[d.n]||{};var lv=LEVELS.filter(function(L){return L[0]===r.level})[0];
   lines.push("Design "+d.n+" ("+d.name+"): "+(lv?lv[1]:"not rated")+(r.note?". Note: "+r.note.replace(/\s+/g," "):""))});
- var text=lines.join("\n");
- function done(ok){cmsg.textContent=ok?"Copied.":"Could not copy. Select the text below and copy it by hand.";
-  if(!ok){var t=document.createElement("textarea");t.className="cfall";t.value=text;t.readOnly=true;panel.appendChild(t);t.focus();t.select()}}
- try{navigator.clipboard.writeText(text).then(function(){done(true)},function(){done(false)})}catch(e){done(false)}
+ return lines.join("\n");
+}
+function submitRatings(email){
+ if(!window.HMRDock||!window.HMRDock.send){cmsg.textContent="Still loading. Try again in a moment.";return}
+ cmsg.textContent="Sending...";
+ window.HMRDock.send({kind:"design",subject:"Endgame Life design ratings",message:ratingText(),email:email||"",details:{ratings:ratings}}).then(function(r){
+  cmsg.textContent=r&&r.ok?"Sent. Thank you so much for your contribution.":"Your email app should have opened with your ratings. They are still saved here.";
+ },function(){cmsg.textContent="Not sent. Your ratings are still saved here. Try again."});
+}
+bMail.addEventListener("click",function(){
+ if(emr.hidden){emr.hidden=false;em.focus();cmsg.textContent="Add your email, then press Submit with my email again.";return}
+ var v=em.value.trim();
+ if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)){cmsg.textContent="That email does not look complete. Check it, or submit anonymously.";em.focus();return}
+ submitRatings(v);
 });
+bAnon.addEventListener("click",function(){submitRatings("")});
 
 /* ---------- Optional feedback pop-up near the bottom ---------- */
 (function(){

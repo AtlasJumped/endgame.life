@@ -10,7 +10,7 @@
  "media": null,
  "steps": [
   {
-   "say": "Made-up example, nothing is sent. Maya opens her new dashboard, and it checks what it can read.",
+   "say": "Made-up example, nothing is sent. Maya opens her new dashboard. First it is assessing the environment: checking, slowly and safely, what it can read.",
    "act": [
     [
      "show",
@@ -24,7 +24,8 @@
      "move",
      "m1.s1"
     ]
-   ]
+   ],
+   "hold": 4500
   },
   {
    "say": "Her setup rating is 35 of 100, based on what her assistant can actually read.",
